@@ -1,17 +1,19 @@
-#include "main.h"
-/**
- * main - check the code.
- *
- * Return: Always 0.
- */
-int main(void)
+#include <stdio.h>
+
+void print_times_table(int n)
 {
-	print_times_table(3);
-	_putchar('\n');
-	print_times_table(5);
-	_putchar('\n');
-	print_times_table(98);
-	_putchar('\n');
-	print_times_table(12);
-	return (0);
+    if (n < 0 || n > 15) {
+        return;
+    }
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= n; j++) {
+            int result = i * j;
+            if (j == 0) {
+                printf("%d", result);
+            } else {
+                printf("\t%d", result);
+            }
+        }
+        printf("\n");
+    }
 }
